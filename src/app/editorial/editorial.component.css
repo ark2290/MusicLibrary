@@ -1,0 +1,38 @@
+a{
+    padding-left: 15px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.editorial{
+    text-align: center;    
+}
+h3{
+    padding: 15px;
+}
+label{
+    width: 20%;
+}
+.form-element {
+    padding: 5px 0px 25px 2px;
+    width: 100%;
+  }
+  
+  .button {
+    width: 100%;
+  }
+
+  .btn-success.disabled, .btn-success:disabled{
+      cursor: default;
+  }
+
+  .form-control{
+    display: inline !important;
+    width: 30% !important;
+  }
+
+  .alert-danger{
+    width: 40%;
+    margin-left: 35%;
+    padding: 10px;
+    margin-bottom: 5px;
+  }

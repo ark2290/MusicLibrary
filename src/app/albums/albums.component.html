@@ -1,0 +1,39 @@
+<div class="container">
+    <a routerLink="/homepage" routerLinkActive="active"> Go back ></a>
+    <div class="search">
+    <input type="text" [(ngModel)]="searchAlbum" placeholder="search by albumns,title,composer,release date">
+  </div>
+  <div class="custom" *ngFor="let details of value | filter : searchAlbum">
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>Title Name</strong></p>
+      <span>{{details.Title}}</span>
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Album Name</strong></p>
+      <span>{{details.Album}}</span>
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Composer Name</strong></p>
+      <span>{{details.Composer}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>Released Date</strong></p>
+      <span>{{details.ReleasedDate}}</span>
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Artist Name</strong></p>
+      <span>{{details.Artist}}</span>
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Play</strong></p>
+      <audio controls>
+          <source src="../../assets/audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+</div>
+</div>

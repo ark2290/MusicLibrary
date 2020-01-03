@@ -1,0 +1,58 @@
+<div class="container">
+    <a routerLink="/homepage" routerLinkActive="active"> Go back ></a>
+    <div class="editorial">
+      <h3>Add you favorite Albums here</h3>
+      <form [formGroup]="formGroup" novalidate>          
+            <div class="form-group">
+                    <label>Title Name:</label>
+                    <input class="form-control" formControlName="Title" type="text">
+            </div>
+            <div *ngIf="formGroup.controls['Title'].invalid && (formGroup.controls['Title'].dirty || formGroup.controls['Title'].touched)" class="alert alert-danger">
+                    <div *ngIf="formGroup.controls['Title'].errors.required">
+                      Title Name is required.
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label>Album Name:</label>
+                    <input class="form-control" formControlName="Album" type="text">
+            </div>
+            <div *ngIf="formGroup.controls['Album'].invalid && (formGroup.controls['Album'].dirty || formGroup.controls['Album'].touched)" class="alert alert-danger">
+                    <div *ngIf="formGroup.controls['Album'].errors.required">
+                    Album Name is required.
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label>Composer Name:</label>
+                    <input class="form-control" formControlName="Composer" type="text">
+            </div>
+            <div *ngIf="formGroup.controls['Composer'].invalid && (formGroup.controls['Composer'].dirty || formGroup.controls['Composer'].touched)" class="alert alert-danger">
+                    <div *ngIf="formGroup.controls['Composer'].errors.required">
+                            Composer Name is required.
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label>Released Date:</label>
+                    <input class="form-control" formControlName="ReleasedDate" type="text">
+            </div>
+            <div *ngIf="formGroup.controls['ReleasedDate'].invalid && (formGroup.controls['ReleasedDate'].dirty || formGroup.controls['ReleasedDate'].touched)" class="alert alert-danger">
+                    <div *ngIf="formGroup.controls['ReleasedDate'].errors.required">
+                            Released Date is required.
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label>Artist:</label>
+                    <input class="form-control" formControlName="Artist" type="text">
+            </div>
+            <div *ngIf="formGroup.controls['Artist'].invalid && (formGroup.controls['Artist'].dirty || formGroup.controls['Artist'].touched)" class="alert alert-danger">
+                    <div *ngIf="formGroup.controls['Artist'].errors.required">
+                            Artist is required.
+                    </div>
+            </div>
+            <button type="submit"
+                [disabled]="formGroup.pristine || formGroup.invalid" (click)="submit(formGroup.value)" class="btn btn-success">
+                Submit
+            </button>
+          
+      </form>
+    </div>
+</div>
